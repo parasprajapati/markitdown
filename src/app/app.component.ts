@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'markitdown';
+  markdownInput = '';
+  htmlOutput = '';
 
+  convertMarkdown() {
+    const lines = this.markdownInput.split('\n');
+    console.log(lines);
+    this.htmlOutput = this.markdownInput;
+  }
 }
+

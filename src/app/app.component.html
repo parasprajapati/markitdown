@@ -6,10 +6,18 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <textarea class="form-control" name="markdownInput" id="markdownInput" cols="30" rows="10"></textarea>
+            <textarea
+                class="form-control"
+                name="markdownInput"
+                id="markdownInput"
+                cols="30"
+                rows="10"
+                [(ngModel)]="markdownInput"
+                (ngModelChange)="convertMarkdown()"
+            ></textarea>
         </div>
         <div class="col-md-6">
-            <textarea class="form-control" name="htmlOutput" id="htmlOutput" cols="30" rows="10"></textarea>
+            <div [innerHTML]="htmlOutput"></div>
         </div>
     </div>
 </div>
